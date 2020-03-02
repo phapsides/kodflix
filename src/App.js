@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import lastSamurai from './the-last-samurai.jpg';
 
 function App() {
   	return (
 		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<h1>
-					Welcome to Kodflix
-				</h1>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</header>
+			<h1>
+				Welcome to Kodflix!
+			</h1>
+			<section className="favouriteMovie">
+				<img src={lastSamurai} alt="The last samurai cover" />
+			</section>
 		</div>
   	);
 }
