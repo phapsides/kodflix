@@ -1,6 +1,4 @@
-.App {
-    text-align: center;
-}
+/* TODO: make the below mobile first */
 
 .movieList {
     display: flex;
@@ -9,11 +7,44 @@
 }
 
 .movie {
+    cursor: pointer;
+    display: flex;
     flex-basis: 33.33%;
+    position: relative;
+}
+
+.movieTitle {
+    align-self: flex-end;
+    background: rgb(0, 0, 0, 0.7);
+    color: #fff;
+    display: none;
+    margin: 0;
+    padding: 1.5rem 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.movie:hover .movieTitle {
+    display: block;
 }
 
 img {
     display: block;
     height: auto;
     width: 100%;
+}
+
+@media screen and (max-device-width: 640px) { 
+    .movieList {
+        flex-direction: column;
+    }
+
+    .movie {
+        flex-basis: 100%;
+    }
+
+    .movieTitle {
+        display: block;
+    }
 }
