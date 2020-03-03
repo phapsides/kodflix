@@ -1,43 +1,51 @@
 import React from 'react';
+import Movie from './Movie.js';
 import './App.css';
-import lastSamurai from './the-last-samurai.jpg';
-import troy	from './troy.jpg'
-import marcoPolo from './marco-polo.jpg'
-import theLastKingdom from './the-last-kingdom.jpg'
-import blackDeath from './black-death.jpg'
-import ipMan from './ip-man.jpg'
+import kodflixLogo from './images/kodflix-logo.png';
+import lastSamurai from './images/covers/the-last-samurai.jpg';
+import troy	from './images/covers/troy.jpg';
+import marcoPolo from './images/covers/marco-polo.jpg';
+import theLastKingdom from './images/covers/the-last-kingdom.jpg';
+import blackDeath from './images/covers/black-death.jpg';
+import ipMan from './images/covers/ip-man.jpg';
 
 function App() {
   	return (
 		<div className="App">
-			<h1>
-				Welcome to Kodflix!
-			</h1>
+
+			<img src={kodflixLogo} className="logo" alt="Kodflix logo" />
+			
 			<section className="movieList">
-				<div class="movie">
-					<h2 className="movieTitle">The Last Samurai</h2>
-					<img src={lastSamurai} alt="The Last Samurai cover" />
-				</div>
-				<div class="movie">
-					<h2 className="movieTitle">Troy</h2>
-					<img src={troy} alt="Troy cover" />
-				</div>
-				<div class="movie">
-					<h2 className="movieTitle">Marco Polo</h2>
-					<img src={marcoPolo} alt="Marco Polo cover" />
-				</div>
-				<div class="movie">
-					<h2 className="movieTitle">The Last Kingdom</h2>
-					<img src={theLastKingdom} alt="The Last Kingdom cover" />
-				</div>
-				<div class="movie">
-					<h2 className="movieTitle">Black Death</h2>
-					<img src={blackDeath} alt="Black Death cover" />
-				</div>
-				<div class="movie">
-					<h2 className="movieTitle">Ip Man</h2>
-					<img src={ipMan} alt="Ip Man cover" />
-				</div>
+				<Movie 
+					title="The Last Samurai" 
+					image={lastSamurai}
+					imageAlt="The Last Samurai" 
+				/>
+				<Movie 
+					title="Troy" 
+					image={troy}	
+					imageAlt="Troy" 
+				/>	
+				<Movie 
+					title="Marco Polo" 
+					image={marcoPolo}
+					imageAlt="Marco Polo" 
+				/>
+				<Movie 
+					title="The Last Kingdom" 
+					image={theLastKingdom}
+					imageAlt="The Last Kingdom" 
+				/>
+				<Movie 
+					title="Black Death" 
+					image={blackDeath}
+					imageAlt="Black Death" 
+				/>
+				<Movie 
+					title="Ip Man" 
+					image={ipMan}
+					imageAlt="Ip Man" 
+				/>
 			</section>
 		</div>
   	);
