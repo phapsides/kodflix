@@ -1,10 +1,15 @@
 import React from 'react';
+import iconStar from './assets/star.svg';
+import './Movie.css';
 
 export default function Movie(props) {
 	return (
-		<div className="movie">
-			<h3 className="movieTitle">{props.title}</h3>
+		<div className="Movie">
 			<img src={props.image} alt={`${props.imageAlt} cover`} />
+			<div className="data">
+				<h1 className="movieTitle">{props.title}</h1>
+				<p>Rating: <img className="icon-star" src={iconStar} alt="Rating star" />{props.rating}/10</p>
+			</div>
 		</div>
 	)
 }
