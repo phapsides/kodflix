@@ -1,5 +1,5 @@
 import React from 'react';
-import Movie from './Movie.js';
+import Movie from './Movie/Movie.js';
 import './App.css';
 import kodflixLogo from './images/kodflix-logo.png';
 import lastSamurai from './images/covers/the-last-samurai.jpg';
