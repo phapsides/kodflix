@@ -1,0 +1,43 @@
+@import "./../variables.scss";
+
+.Movie {
+    cursor: pointer;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+
+    &:hover {
+        .data {
+            @media screen and (min-device-width: 641px) {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    .data {
+        background: rgba(255,255,255, 0.9);
+        bottom: 0;
+        box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
+        font-family: "Open Sans", sans-serif;
+        padding: 1em;
+        position: absolute;
+        width: 100%;
+        @media screen and (min-device-width: 641px) {
+            transform: translateY(calc(100%));
+            transition: transform 0.5s linear;
+        }
+    }
+
+    .movieTitle {
+        color: $primaryColor;
+        font-weight: 300;
+        margin: 1rem 0 0;
+    }
+
+    .icon-star {
+        display: inline-block;
+        height: 16px;
+        margin: 0 0.25rem 0 0.1rem;
+        width: 16px;
+    } 
+}

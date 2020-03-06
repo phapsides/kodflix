@@ -1,7 +1,10 @@
+@import "variables.scss";
+
 .logo {
     height: auto;
     padding: 30px;
     width: 100px;
+    border: 3px solid $primaryColor;
 }
 
 img {
@@ -13,10 +16,8 @@ img {
 .movieList {
     display: grid;
     grid-template-columns: 1fr;
-}
 
-@media screen and (min-device-width: 641px) { 
-    .movieList {
+    @media screen and (min-device-width: 641px) {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
