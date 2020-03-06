@@ -1,6 +1,6 @@
 import React from 'react';
 import Movie from './Movie/Movie';
-import './App.css';
+import './App.scss';
 import kodflixLogo from './images/kodflix-logo.png';
 import lastSamurai from './Movie/assets/movie-covers/the-last-samurai.jpg';
 import troy	from './Movie/assets/movie-covers/troy.jpg';
@@ -12,8 +12,9 @@ import ipMan from './Movie/assets/movie-covers/ip-man.jpg';
 function App() {
   	return (
 		<div className="App">
-
-			<img src={kodflixLogo} className="logo" alt="Kodflix logo" />
+			<header>
+				<img src={kodflixLogo} className="logo" alt="Kodflix logo" />
+			</header>
 			
 			<section className="movieList">
 				<Movie 
