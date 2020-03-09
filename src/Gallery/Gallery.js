@@ -1,4 +1,5 @@
 import React from 'react';
+import './Gallery.scss';
 import Movie from './Movie/Movie'
 import lastSamurai from './assets/covers/the-last-samurai.jpg';
 import troy	from './assets/covers/troy.jpg';
@@ -9,7 +10,7 @@ import ipMan from './assets/covers/ip-man.jpg';
 
 export default function Gallery(props) {
 	return (
-		<React.Fragment>
+		<section className="Gallery">
 			<Movie 
 				title="The Last Samurai" 
 				image={lastSamurai}
@@ -46,6 +47,6 @@ export default function Gallery(props) {
 				imageAlt="Ip Man"
 				rating='8.0'
 			/>
-		</React.Fragment>
+		</section>
 	)
 }
