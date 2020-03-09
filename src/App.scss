@@ -1,22 +1,7 @@
 @import "variables.scss";
 
-.logo {
-    height: auto;
-    padding: 30px;
-    width: 100px;
-}
-
 img {
     display: block;
     height: auto;
     width: 100%;
-}
-
-.movieList {
-    display: grid;
-    grid-template-columns: 1fr;
-
-    @media screen and (min-device-width: 641px) {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
 }

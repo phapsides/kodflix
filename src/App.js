@@ -1,20 +1,28 @@
 import React from 'react';
+import Header from './Header/Header';
 import Gallery from './Gallery/Gallery';
+import Details from './Details';
+import { BrowserRouter as Router, Route } from 'react-router-dom'; 
 import './App.scss';
-import kodflixLogo from './images/kodflix-logo.png';
 
 function App() {
   	return (
-		<div className="App">
-			<header>	
-				<img src={kodflixLogo} className="logo" alt="Kodflix logo" />
-			</header>
-			
-			<section className="movieList">
-				<Gallery />
-			</section>
-		</div>
+		<Router>
+			<div className="App">
+				<Header />
+				
+				<main>
+					<Route exact path='/' component={Gallery} />
+					<Route exact path='/details' component={Details} />
+				</main>
+
+				<footer>
+					
+				</footer>
+			</div>
+		</Router>
   	);
 }
+
 
 export default App;
