@@ -1,6 +1,6 @@
 import React from 'react';
-import iconStar from './assets/star.svg';
 import './Movie.scss';
+import iconStar from './../assets/star.svg';
 
 export default function Movie(props) {
 	return (
