@@ -11,37 +11,43 @@ import ipMan from './assets/covers/ip-man.jpg';
 export default function Gallery(props) {
 	return (
 		<section className="Gallery">
-			<Movie 
+			<Movie
+				id="the-last-samurai"
 				title="The Last Samurai" 
 				image={lastSamurai}
 				imageAlt="The Last Samurai"
 				rating='7.7' 
 			/>
-			<Movie 
+			<Movie
+				id="troy"
 				title="Troy" 
 				image={troy}	
 				imageAlt="Troy" 
 				rating='7.2'
 			/>	
-			<Movie 
+			<Movie
+				id="marco-polo"
 				title="Marco Polo" 
 				image={marcoPolo}
 				imageAlt="Marco Polo"
 				rating='8.0'
 			/>
-			<Movie 
+			<Movie
+				id="the-last-kingdom"
 				title="The Last Kingdom" 
 				image={theLastKingdom}
 				imageAlt="The Last Kingdom" 
 				rating='8.3'
 			/>
-			<Movie 
+			<Movie
+				id="black-death"
 				title="Black Death" 
 				image={blackDeath}
 				imageAlt="Black Death"
 				rating='6.4'
 			/>
-			<Movie 
+			<Movie
+				id="ip-man"
 				title="Ip Man" 
 				image={ipMan}
 				imageAlt="Ip Man"
