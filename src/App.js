@@ -12,8 +12,8 @@ function App() {
 				<Header />
 				
 				<main>
-					<Route exact path='/' component={Gallery} />
-					<Route exact path='/details' component={Details} />
+					<Route exact path="/" component={Gallery} />
+					<Route exact path="/:slug" component={Details} />
 				</main>
 
 				<footer>

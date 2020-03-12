@@ -12,42 +12,42 @@ export default function Gallery(props) {
 	return (
 		<section className="Gallery">
 			<Movie
-				id="the-last-samurai"
+				slug="the-last-samurai"
 				title="The Last Samurai" 
 				image={lastSamurai}
 				imageAlt="The Last Samurai"
 				rating='7.7' 
 			/>
 			<Movie
-				id="troy"
+				slug="troy"
 				title="Troy" 
 				image={troy}	
 				imageAlt="Troy" 
 				rating='7.2'
 			/>	
 			<Movie
-				id="marco-polo"
+				slug="marco-polo"
 				title="Marco Polo" 
 				image={marcoPolo}
 				imageAlt="Marco Polo"
 				rating='8.0'
 			/>
 			<Movie
-				id="the-last-kingdom"
+				slug="the-last-kingdom"
 				title="The Last Kingdom" 
 				image={theLastKingdom}
 				imageAlt="The Last Kingdom" 
 				rating='8.3'
 			/>
 			<Movie
-				id="black-death"
+				slug="black-death"
 				title="Black Death" 
 				image={blackDeath}
 				imageAlt="Black Death"
 				rating='6.4'
 			/>
 			<Movie
-				id="ip-man"
+				slug="ip-man"
 				title="Ip Man" 
 				image={ipMan}
 				imageAlt="Ip Man"
