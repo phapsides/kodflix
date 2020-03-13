@@ -7,8 +7,12 @@ img {
     width: 100%;
 }
 
-main {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 0 1rem;
+.App {
+    background: #333    ;
+    
+    main {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
 }
