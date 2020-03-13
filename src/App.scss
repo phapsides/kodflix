@@ -8,11 +8,16 @@ img {
 }
 
 .App {
-    background: #333    ;
+    background: $primaryColor;
     
     main {
+        height: 100%;
         max-width: 1024px;
         margin: 0 auto;
         padding: 0 1rem;
+    }
+
+    h1 {
+        color: #fff;
     }
 }
