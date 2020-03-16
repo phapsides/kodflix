@@ -1,27 +1,31 @@
 import React, { Component} from 'react';
 import { Link } from 'react-router-dom';
+import getMovies from './Gallery/getMovies';
 
 export default class Details extends Component {
 
 	constructor() {
 		super();
 		this.state = {
-			message: 'Hello, this will be the details page for each Movie & TV show.'
+			movie: {}
 		}
 	}
 
 	componentDidMount() {
-		setTimeout(() => {
-			this.setState({
-				message: 'Coming soon!'
-			});
-		}, 3000);
+		let movieSlug = this.props.match.params.slug;
+		let movieObject = getMovies().find(function (movie) {
+			return movie.slug === movieSlug;
+		});
+
+		this.setState({
+			movie: movieObject
+		});
 	}
 
 	render() {
 		return (
 			<section>
-				<h1>{this.state.message}</h1>
+				<h1>{this.state.movie.title}</h1>
 				<Link to='/'> &#60; button </Link>
 			</section>
 		)

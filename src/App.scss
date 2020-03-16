@@ -11,7 +11,8 @@ img {
     background: $primaryColor;
     
     main {
-        height: 100%;
+        // TODO: Temporary use the below
+        height: 120vh;
         max-width: 1024px;
         margin: 0 auto;
         padding: 0 1rem;
