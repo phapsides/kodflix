@@ -1,5 +1,8 @@
 .logo {
     height: auto;
-    padding: 30px;
+    padding: 1rem;
     width: 100px;
+    @media screen and (min-device-width: 641px) {
+        padding: 2rem;
+    }
 }

@@ -1,5 +1,12 @@
 @import "variables.scss";
 
+body {
+    background: #434343;
+    background-image: linear-gradient(to right, #434343, #000000);
+    background-attachment: fixed;	
+    background-size: cover;
+}
+
 img {
     display: block;
     height: auto;
@@ -7,18 +14,21 @@ img {
     width: 100%;
 }
 
+p {
+    font-size: 16px;
+    letter-spacing: 0.03rem;
+    line-height: 25px;
+}
+
 .App {
-    background: $primaryColor;
     
     main {
-        // TODO: Temporary use the below
-        height: 120vh;
-        max-width: 1024px;
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 0 1rem;
+        padding: 0;
+        @media screen and (min-device-width: 641px) {
+            padding: 0 1rem;
+        }
     }
 
-    h1 {
-        color: #fff;
-    }
 }

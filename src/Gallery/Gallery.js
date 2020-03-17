@@ -5,7 +5,7 @@ import getMovies from './getMovies'
 
 export default function Gallery(props) {
 	return (
-		<section className="Gallery">
+		<main className="Gallery">
 			{
 				getMovies().map(movie => (
 					<Movie
@@ -14,10 +14,11 @@ export default function Gallery(props) {
 						title={movie.title}
 						image={movie.image}
 						imageAlt={movie.imageAlt}
+						synopsis={movie.synopsis}
 						rating={movie.rating}
 					/> 
 				))
 			}
-		</section>
+		</main>
 	)
 }
