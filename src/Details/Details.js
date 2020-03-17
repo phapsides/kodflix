@@ -33,15 +33,16 @@ export default class Details extends Component {
 		} else {
 			return (
 				<article className="Details">
+					{/* TODO: Confirm that the below approach won't cause issues */}
 					<section className="heroImage" 
 							 style={{backgroundImage: `url(${this.state.movie.image})`}}>		
 					</section>
-					<section className="movieDetails container">
-						
+					<main class="container">
+						<section className="movieDetails">
 							<h1>{this.state.movie.title}</h1>
 							<p>{this.state.movie.synopsis}</p>
-					
-					</section>
+						</section>
+					</main>
 				</article>
 			)
 		}
