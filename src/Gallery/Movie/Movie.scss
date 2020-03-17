@@ -3,8 +3,12 @@
 .Movie {
     border-radius: 0.5rem;
     display: flex;
+    margin: 0 1rem;
     overflow: hidden;
     position: relative;
+    @media screen and (min-device-width: 641px) {
+        margin: 0;
+    }
 
     &:hover {
         .data {

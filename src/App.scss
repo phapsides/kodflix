@@ -1,11 +1,14 @@
 @import "variables.scss";
 
 body {
-    background: #434343;
-    background-image: linear-gradient(to right, #434343, #000000);
-    background-attachment: fixed;	
+    // background: #989898;
+    background-image: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), 
+                      linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+    background-attachment: fixed;
+    background-blend-mode: multiply;
     background-size: cover;
 }
+
 
 img {
     display: block;
@@ -22,13 +25,8 @@ p {
 
 .App {
     
-    main {
+    .container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0;
-        @media screen and (min-device-width: 641px) {
-            padding: 0 1rem;
-        }
     }
-
 }

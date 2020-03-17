@@ -2,6 +2,7 @@ import React, { Component} from 'react';
 import { Redirect } from 'react-router-dom';
 import getMovies from './../Gallery/getMovies';
 import './Details.scss';
+// import iconStar from './../assets/star.svg';
 
 
 export default class Details extends Component {
@@ -31,15 +32,17 @@ export default class Details extends Component {
 			)
 		} else {
 			return (
-				<main className="Details">
-					<h1>{this.state.movie.title}</h1>
-					<div className="movieDetails">
-						<img src={this.state.movie.image} alt={this.state.movie.imageAlt} />
-						<div className="data">
+				<article className="Details">
+					<section className="heroImage" 
+							 style={{backgroundImage: `url(${this.state.movie.image})`}}>		
+					</section>
+					<section className="movieDetails container">
+						
+							<h1>{this.state.movie.title}</h1>
 							<p>{this.state.movie.synopsis}</p>
-						</div>
-					</div>
-				</main>
+					
+					</section>
+				</article>
 			)
 		}
 	}

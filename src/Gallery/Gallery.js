@@ -5,7 +5,7 @@ import getMovies from './getMovies'
 
 export default function Gallery(props) {
 	return (
-		<main className="Gallery">
+		<main className="Gallery container">
 			{
 				getMovies().map(movie => (
 					<Movie
