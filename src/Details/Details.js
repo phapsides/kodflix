@@ -32,10 +32,12 @@ export default class Details extends Component {
 		} else {
 			return (
 				<main className="Details">
-					<img src={this.state.movie.image} alt={this.state.movie.imageAlt} />
-					<div className="data">
-						<h1>{this.state.movie.title}</h1>
-						<p>{this.state.movie.synopsis}</p>
+					<h1>{this.state.movie.title}</h1>
+					<div className="movieDetails">
+						<img src={this.state.movie.image} alt={this.state.movie.imageAlt} />
+						<div className="data">
+							<p>{this.state.movie.synopsis}</p>
+						</div>
 					</div>
 				</main>
 			)
