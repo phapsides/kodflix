@@ -1,8 +1,10 @@
 import React from 'react';
 import Header from './Header/Header';
+import Footer from './Footer/Footer';
 import Gallery from './Gallery/Gallery';
-import Details from './Details';
-import { BrowserRouter as Router, Route } from 'react-router-dom'; 
+import Details from './Details/Details';
+import NotFound from './NotFound/NotFound';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
 import './App.scss';
 
 function App() {
@@ -11,14 +13,13 @@ function App() {
 			<div className="App">
 				<Header />
 				
-				<main>
+				<Switch>
 					<Route exact path="/" component={Gallery} />
+					<Route exact path="/not-found" component={NotFound} />
 					<Route exact path="/:slug" component={Details} />
-				</main>
+				</Switch>
 
-				<footer>
-					
-				</footer>
+				<Footer />
 			</div>
 		</Router>
   	);
