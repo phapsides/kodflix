@@ -18,7 +18,7 @@ module.exports = function getShows() {
         {
             "slug": "the-last-kingdom",
             "title": "The Last Kingdom",
-            "synopsis": "During their invasion of England, the Danes capture Uhtred, a young successor of Saxon earldom, and raise him as their own. Years later, Uhtred's loyalties are put to the test by the Danes.
+            "synopsis": "During their invasion of England, the Danes capture Uhtred, a young successor of Saxon earldom, and raise him as their own. Years later, Uhtred's loyalties are put to the test by the Danes."
         },
         {
             "slug": "black-death",
