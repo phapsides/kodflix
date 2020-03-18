@@ -2,7 +2,6 @@ import React, { Component} from 'react';
 import { Redirect } from 'react-router-dom';
 import getMovies from '../Gallery/getMovies';
 import './Details.scss';
-// import iconStar from './../assets/star.svg';
 
 
 export default class Details extends Component {

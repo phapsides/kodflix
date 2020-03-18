@@ -9,7 +9,6 @@ body {
     background-size: cover;
 }
 
-
 img {
     display: block;
     height: auto;
@@ -23,8 +22,11 @@ p {
     line-height: 25px;
 }
 
+a {
+    display: inline-block;
+}
+
 .App {
-    
     .container {
         max-width: 1200px;
         margin: 0 auto;
