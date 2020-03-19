@@ -1,24 +1,89 @@
 .Details {
-	color: #fefefe;
+    color: #fefefe;
 
-	.heroImage {
-		background-position: center 20%;
-		background-size: 100% auto;
-		box-sizing: border-box;
-		height: 240px;
-		padding: 0;
-		@media screen and (min-device-width: 641px) {
-			height: 330px;
-		}
-	}
-	.movieDetails {
-		padding: 0 1rem;
-		width: 66.66%;
-		@media screen and (min-device-width: 641px) {
-			padding: 0;
-		}
-	}
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1rem;
+
+        @media screen and (min-device-width: 641px) {
+            grid-template-columns: 7fr 5fr;
+        }
+    }
+
+    .movie {
+        border-bottom: 0.0625rem solid #e3dddd;
+        padding: 0 0 1.5rem;
+
+        img {
+            display: block;
+            height: 60vh;
+            margin: 0 0 0.75rem;
+            object-fit: cover;
+        }
+
+        .data {
+            h1 {
+                font-size: 2.5rem;
+                margin: 1.75rem 0 1rem;
+            }
+
+            h3 {
+                font-size: 2rem;
+                margin: 0;
+            }
+
+            .description {
+                border-top: 0.0625rem solid #e3dddd;
+                margin: 2rem 0;
+                padding: 1rem 0 0;
+            }
+
+            .watch-now {
+                position: relative;
+				display: inline-block;
+				background: #3e3e3f;
+				color: #ffffff;
+				border: none;
+				border-radius: 0;
+				padding: 1.25rem 2.5rem;
+				font-size: 1rem;
+				text-transform: uppercase;
+				cursor: pointer;
+				transform: translateZ(0);
+				transition: color 0.3s ease;
+				letter-spacing: 0.0625rem;
+				&:hover {
+					&::before {
+						transform: scaleX(1);
+					}
+				}
+				&::before {
+					position: absolute;
+					content: '';
+					z-index: -1;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: #565657;
+					transform: scaleX(0);
+					transform-origin: 0 50%;
+					transition: transform 0.3s ease-out;
+				}
+            }
+        }
+    }
 }
 
 
-  
+@keyframes fadeImg {
+	from {
+	  opacity: 0;
+	}
+	to {
+	  opacity: 1;
+	}
+  }
