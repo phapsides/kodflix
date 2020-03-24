@@ -1,24 +1,34 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Gallery.scss';
 import Movie from './Movie/Movie'
-import getMovies from './getMovies'
 
-export default function Gallery(props) {
-	return (
-		<main className="Gallery container">
-			{
-				getMovies().map(movie => (
+export default class Gallery extends Component {
+
+	constructor() {
+		super();
+		this.state = {
+			movie: []
+		}
+	}
+
+	componentDidMount() {
+		fetch('/rest/shows')
+			.then(res => res.json())
+			.then(movie => this.setState({movie}, () => console.log('Movies fetched...', movie)));
+	}
+
+	render() {
+		return (
+			<main className="Gallery container">
+				{this.state.movie.map(movie =>
 					<Movie
 						key={movie.slug}
 						slug={movie.slug}
 						title={movie.title}
-						image={movie.image}
-						imageAlt={movie.imageAlt}
 						synopsis={movie.synopsis}
-						rating={movie.rating}
 					/> 
-				))
-			}
-		</main>
-	)
+				)}
+			</main>
+		)
+	}
 }
