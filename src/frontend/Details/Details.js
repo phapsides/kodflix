@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import './Details.scss';
+import Loader from './../Loader/Loader';
 
 
 export default class Details extends Component {
@@ -29,7 +30,7 @@ export default class Details extends Component {
 	render() {
 		if (!this.state.isLoaded) {
 			return (
-				<div>Loading...</div>
+				<Loader />
 			)
 		} else if (!this.state.movie) {
 			return <Redirect to='/not-found' />
@@ -39,7 +40,7 @@ export default class Details extends Component {
 					<main className="container">
 						<div className="grid movie">
 							<div className="movie-image">
-								<img src={require(`./../common/images/${this.state.movie.image}`)} alt={`${this.state.movie.imageAlt}} cover`} />
+								<img src={require(`./../common/images/${this.state.movie.image}`)} alt={`${this.state.movie.title}} cover`} />
 							</div>
 							<div className="data">
 								<h1>{this.state.movie.title}</h1>
