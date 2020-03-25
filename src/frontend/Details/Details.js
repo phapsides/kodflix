@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import './Details.scss';
-import Loader from './../Loader/Loader';
+
 
 
 export default class Details extends Component {
@@ -30,7 +30,7 @@ export default class Details extends Component {
 	render() {
 		if (!this.state.isLoaded) {
 			return (
-				<Loader />
+				<div>Loading...</div>
 			)
 		} else if (!this.state.movie) {
 			return <Redirect to='/not-found' />
