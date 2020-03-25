@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import './Details.scss';
 
@@ -8,41 +8,51 @@ export default class Details extends Component {
 	constructor() {
 		super();
 		this.state = {
-			movie: []
+			movieDB: [],
+			isLoaded: false,
+			movie: {},
 		}
 	}
 
 	componentDidMount() {
 		fetch('/rest/shows')
-			.then(res => res.json())
-			.then(movie => this.setState({movie}, () => console.log('Movies fetched...', movie)));
+			.then((response) => {
+				return response.json();
+			})
+			.then((movieDB) => {
+				let movieId = this.props.match.params.movieId;
+				let movie = movieDB.find(movie => movie.id === movieId);
+				this.setState({ movie, isLoaded: true })
+			});
 	}
 
 	render() {
-		if(this.state.movie === undefined) {
+		if (!this.state.isLoaded) {
 			return (
-				<Redirect to='/not-found' />
+				<div>Loading...</div>
 			)
+		} else if (!this.state.movie) {
+			return <Redirect to='/not-found' />
 		} else {
 			return (
 				<article className="Details">
 					<main className="container">
 						<div className="grid movie">
 							<div className="movie-image">
-								<img src={this.state.movie.image} alt={this.state.movie.imageAlt} />
+								<img src={require(`./../common/images/${this.state.movie.image}`)} alt={`${this.state.movie.imageAlt}} cover`} />
 							</div>
 							<div className="data">
 								<h1>{this.state.movie.title}</h1>
-								{/* <h3>Rating</h3> */}
-								<div className="description">
-									<p>{this.state.movie.synopsis}</p>
-								</div>
+								<h3>Rating</h3>
+								<p className="description">
+									{this.state.movie.synopsis}
+								</p>
 								<button className="watch-now">Watch now!</button>
 							</div>
 						</div>
 					</main>
 				</article>
-			)
+			);
 		}
 	}
 }

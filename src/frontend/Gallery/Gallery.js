@@ -7,23 +7,24 @@ export default class Gallery extends Component {
 	constructor() {
 		super();
 		this.state = {
-			movie: []
-		}
+			movieDB: []
+		};
 	}
 
 	componentDidMount() {
 		fetch('/rest/shows')
 			.then(res => res.json())
-			.then(movie => this.setState({movie}, () => console.log('Movies fetched...', movie)));
+			.then(movieDB => this.setState({movieDB}));
 	}
 
 	render() {
 		return (
 			<main className="Gallery container">
-				{this.state.movie.map(movie =>
+				{this.state.movieDB.map(movie =>
 					<Movie
 						key={movie.slug}
 						slug={movie.slug}
+						image={movie.image}
 						title={movie.title}
 						synopsis={movie.synopsis}
 					/> 
