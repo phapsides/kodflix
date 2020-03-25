@@ -10,8 +10,8 @@ export default class Details extends Component {
 		super();
 		this.state = {
 			movieDB: [],
-			isLoaded: false,
 			movie: {},
+			isLoaded: false
 		}
 	}
 
@@ -44,7 +44,7 @@ export default class Details extends Component {
 							</div>
 							<div className="data">
 								<h1>{this.state.movie.title}</h1>
-								<h3>Rating</h3>
+								<h3>Rating:</h3>
 								<p className="description">
 									{this.state.movie.synopsis}
 								</p>
