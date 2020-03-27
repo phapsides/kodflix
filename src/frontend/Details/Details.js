@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import './Details.scss';
-
+import Loader from './../Loader/Loader';
 
 
 export default class Details extends Component {
@@ -10,7 +10,6 @@ export default class Details extends Component {
 		super();
 		this.state = {
 			movieDB: [],
-			movie: {},
 			isLoaded: false
 		}
 	}
@@ -30,10 +29,12 @@ export default class Details extends Component {
 	render() {
 		if (!this.state.isLoaded) {
 			return (
-				<div>Loading...</div>
-			)
+				<Loader />
+			);
 		} else if (!this.state.movie) {
-			return <Redirect to='/not-found' />
+			return (
+				<Redirect to='/not-found' />
+			);
 		} else {
 			return (
 				<article className="Details">
